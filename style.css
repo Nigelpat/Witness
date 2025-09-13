@@ -1,0 +1,131 @@
+:root {
+  --bg: #fff8f0;
+  --panel: #ffffff;
+  --ink: #2a1f1f;
+  --muted: #7a6767;
+  --brand: #ff914d;
+  --brand2: #ffce73;
+  --shadow: 0 8px 20px rgba(0,0,0,0.1);
+  --radius: 20px;
+  --max: 960px;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Comic Sans MS", "Poppins", cursive;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, var(--brand), var(--brand2));
+  color: white;
+  padding: 15px 20px;
+  box-shadow: var(--shadow);
+}
+
+.logo {
+  font-size: 40px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: auto;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+@media (min-width: 800px) {
+  .grid { grid-template-columns: 1fr 2fr; }
+}
+
+.panel {
+  background: var(--panel);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+.section-title {
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menu .btn {
+  background: var(--brand);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: 14px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.1s;
+}
+.menu .btn:hover { transform: scale(1.05); }
+
+.lang-toggle {
+  background: white;
+  color: var(--brand);
+  border: 2px solid white;
+  border-radius: var(--radius);
+  padding: 8px 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.choices button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff7f0;
+  border: 2px solid #ffe1c7;
+  border-radius: var(--radius);
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-bottom: 8px;
+}
+.choices button:hover { background: #fff0e0; }
+.choices button.correct { background: #d2ffd2; border-color: #6ecf6e; }
+.choices button.wrong { background: #ffd2d2; border-color: #e66; }
+
+#feedback {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  text-align: center;
+}
+#feedback.correct { color: green; }
+#feedback.wrong { color: red; }
+
+.pill {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--brand2);
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.hr { border-top: 1px dashed #ddd; margin: 12px 0; }

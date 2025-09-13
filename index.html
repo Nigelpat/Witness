@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jehovah’s People — Kids Bible Game</title>
+  <meta name="theme-color" content="#ffb347" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">📖</div>
+      <div>
+        <h1 id="title">Jehovah’s People — Kids Bible Game</h1>
+        <div id="subtitle" class="muted">Fun Bible trivia & scenarios for children!</div>
+      </div>
+    </div>
+    <button class="lang-toggle" id="langBtn" aria-label="Switch language">🇺🇸 English</button>
+  </header>
+
+  <main class="wrap grid">
+    <section class="panel menu-panel">
+      <h2 class="section-title" id="menuTitle">Main Menu</h2>
+      <div class="menu">
+        <button class="btn" id="btnTrivia">🛶 <span id="labelTrivia">Trivia</span></button>
+        <button class="btn" id="btnVerse">🌟 <span id="labelVerse">Verse Match</span></button>
+        <button class="btn" id="btnService">🤝 <span id="labelService">Service Scenarios</span></button>
+
+        <div class="hr"></div>
+
+        <div class="panel subpanel">
+          <h3 id="scoreTitle">High Scores</h3>
+          <div id="scores" class="muted">—</div>
+          <div class="foot" id="persistNote">Scores saved on this device</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="playPanel" aria-live="polite">
+      <div id="feedback"></div> <!-- 👈 feedback area -->
+      <div id="placeholder">
+        <div class="pill" id="howTitle">How it works</div>
+        <p id="howText" class="muted">
+          Pick a game mode on the left. Answer easy questions with pictures, match simple verses, and try scenarios!
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
