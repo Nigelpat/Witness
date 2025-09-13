@@ -39,7 +39,7 @@ function $(id){return document.querySelector(id);}
 function showFeedback(msg, type){
   const fb = $("#feedback");
   fb.textContent = msg;
-  fb.className = type; // applies .correct or .wrong
+  fb.className = type;
   setTimeout(()=>{ fb.textContent=""; fb.className=""; }, 1200);
 }
 
@@ -50,7 +50,14 @@ $("#btnTrivia").addEventListener("click",renderTrivia);
 $("#btnVerse").addEventListener("click",renderVerse);
 $("#btnService").addEventListener("click",renderService);
 
-function renderHome(){ $("#playPanel").innerHTML=`<div id="feedback"></div><p>🎉 Choose a game!</p>`; }
+function renderHome(){ 
+  $("#playPanel").innerHTML=`
+    <div id="feedback"></div>
+    <p>🎉 Choose a game!</p>
+    <p style="margin-top:20px; font-size:14px; color:#888;">
+      ✨ Made with ❤️ by <strong>Patrick Nanlohy</strong>
+    </p>`;
+}
 function renderScores(){
   $("#scores").innerHTML=`Trivia: ${state.high.Trivia||0}<br>Verse: ${state.high.Verse||0}<br>Service: ${state.high.Service||0}`;
 }
